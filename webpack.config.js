@@ -29,9 +29,9 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: srcPath + '/app.html',
-            minify: true,
-            inlineSource: '.(js|css)$'
+            //minify: true,
+            //inlineSource: '.(js|css)$'
         }),
-        new HtmlWebpackInlineSourcePlugin()
+        //new HtmlWebpackInlineSourcePlugin()
     ]
 }
