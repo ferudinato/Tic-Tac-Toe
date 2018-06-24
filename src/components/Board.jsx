@@ -9,6 +9,7 @@ function Square(props) {
     )
 }
 
+
 function calcWinner(squares) {
     const lines = [
         [0, 1, 2],
@@ -44,7 +45,7 @@ export default class Board extends React.Component {
         return (
             <Square 
                 value={ this.state.squares[i] } 
-                onClick={ () => this.handleClick(i) } 
+                onClick={ () => this.handleClick(i) }
             />
         );
     }
@@ -67,11 +68,11 @@ export default class Board extends React.Component {
         if (winner) {
             status = 'El Ganador es: ' + winner
         } else {
-            status = 'Siguiente jugador: ' + (this.state.playerTurn == 1 ? 'X' : 'O');
+            status = "Siguiente jugador: " + (this.state.playerTurn == 1 ? "X" : "O");
         }
 
         return (
-            <div>
+            <div className='game-board'>
                 <div className='status'>{status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
